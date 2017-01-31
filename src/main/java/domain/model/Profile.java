@@ -8,7 +8,6 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement
 @Entity
-@Table(name = "profile")
 @NamedQueries({
         @NamedQuery(name = "profile.all", query = "SELECT p FROM Profile p"),
         @NamedQuery(name = "profile.id", query = "SELECT p FROM Profile p WHERE p.id=:id")

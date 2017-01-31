@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = {"/yourProfile.html","/addProfileServlet"})
+@WebFilter(urlPatterns = {"/yourProfile.html","/final.jsp","/DbServlet"})
 public class AddProfileFilter implements Filter {
 
     public AddProfileFilter() {
@@ -24,7 +24,7 @@ public class AddProfileFilter implements Filter {
         HttpSession session = req.getSession();
         Account account = (Account) session.getAttribute(SessionKey.account);
         if(account==null){
-            ((HttpServletResponse) response).sendRedirect("/FindMate/addProfile.html");
+            ((HttpServletResponse) response).sendRedirect("/FindMateWeb/addProfile.html");
         }
         else{
             chain.doFilter(request, response);

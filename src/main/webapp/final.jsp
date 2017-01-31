@@ -20,7 +20,7 @@
 <h3><%=account.getUserName()%></h3>
 <h3><%=account.getUserPassword()%></h3>
 <h3><%=account.getUserEmail()%></h3>
-<h1>Personal Informations:</h1>
+<h1>PersonalUsnformations:</h1>
 <h3><%=profile.getFirstName()%></h3>
 <h3><%=profile.getLastName()%></h3>
 <h3><%=profile.getCity()%></h3>

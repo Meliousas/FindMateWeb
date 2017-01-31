@@ -9,7 +9,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 @Entity
-@Table(name = "account")
 @NamedQueries({
         @NamedQuery(name = "account.all", query = "SELECT a FROM Account a"),
         @NamedQuery(name = "account.id", query = "SELECT a FROM Account a WHERE a.id=:id")

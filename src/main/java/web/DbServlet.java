@@ -27,9 +27,6 @@ public class DbServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        response.setContentType("text/html");
-
-
         try {
             Connection connection = DriverManager.getConnection("jdbc:hsqldb:hsql://localhost/workdb");
             IRepositoryCatalog catalog = new RepositoryCatalog(new UnitOfWork(connection), connection);
